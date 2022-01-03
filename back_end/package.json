@@ -1,0 +1,22 @@
+{
+  "name": "book_manage",
+  "version": "1.0.0",
+  "description": "book_manage system",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "nanoid": "^3.1.30",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.7.2",
+    "path": "^0.12.7",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FALL",
+  "license": "ISC"
+}
