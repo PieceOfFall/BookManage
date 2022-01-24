@@ -95,7 +95,7 @@ npm i
 
 ​				修改成功后进入middleware文件夹下的mail.js，第三行的authUser修改为你的qq邮箱账号 ， 第四行的authPass修改为你的qq邮箱授权码。（如何获得qq邮箱授权码：https://jingyan.baidu.com/article/0a52e3f40acd38fe62ed72ec.html）
 
-​				返回原来的cmd,输入
+​				返回cmd,输入
 
 ```powershell
 node app
