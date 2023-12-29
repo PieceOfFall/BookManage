@@ -42,7 +42,7 @@
     },
     methods: {
       async getBorrowRequestList() {
-        const res = await this.$http.get(`http://47.107.125.7:8833/api/adminGetBorrowList`)
+        const res = await this.$http.get(`http://127.0.0.1:8833/api/adminGetBorrowList`)
         let tmp = res.data.bookList
         for (let i = 0; i < tmp.length; i++) {
           tmp[i].state = tmp[i].state.substring(11)
@@ -61,7 +61,7 @@
           id: row.state,
           book_id: row.book_id
         }
-        const res = await this.$http.post('http://47.107.125.7:8833/api/adminAgreeBorrow', submit)
+        const res = await this.$http.post('http://127.0.0.1:8833/api/adminAgreeBorrow', submit)
         if (res.status === 200) {
           this.$message.info({
             message: '操作成功',

@@ -60,7 +60,7 @@
     },
     methods: {
       async findBook() {
-        const res = await this.$http.get(`http://47.107.125.7:8833/api/adminGetBooks?book_name=${this.bookName}`)
+        const res = await this.$http.get(this.baseUrl+`/adminGetBooks?book_name=${this.bookName}`)
         this.bookList = res.data.bookList
       },
       async showAddBook() {
@@ -72,7 +72,7 @@
           author: this.formLabelAlign.author,
           statement: this.formLabelAlign.statement
         }
-        const res = await this.$http.post('http://47.107.125.7:8833/api/adminAddBook', submit)
+        const res = await this.$http.post(this.baseUrl+'/api/adminAddBook', submit)
         if (res.status === 200) {
           this.$message.success({
               message: '添加成功！',

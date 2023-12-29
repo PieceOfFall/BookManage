@@ -41,7 +41,7 @@
     },
     methods: {
       async findUser() {
-        const res = await this.$http.get(`http://47.107.125.7:8833/api/adminGetUsers?stu_id=${this.userName}`)
+        const res = await this.$http.get(this.baseUrl+`/api/adminGetUsers?stu_id=${this.userName}`)
         this.userList = res.data.user
         this.userList[0].hasBook = this.userList[0].hasBook.replace(/&/g, ' ')
       },
@@ -49,7 +49,7 @@
         let submit = {
           id:row.id
         }
-        const res = await this.$http.post('http://47.107.125.7:8833/api/resetPassword',submit)
+        const res = await this.$http.post(this.baseUrl+'/api/resetPassword',submit)
         if(res.status === 200) {
           this.$message.success({
             message:'重置成功',
